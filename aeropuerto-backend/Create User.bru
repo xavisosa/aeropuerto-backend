@@ -1,0 +1,20 @@
+meta {
+  name: Create User
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:7400/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Xavier Sosa",
+    "email": "xavisosa@gmail.com",
+    "contrasena": "admin",
+    "fecha_registro": "2025-06-22 23:11:00"
+  }
+}

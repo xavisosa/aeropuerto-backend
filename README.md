@@ -1,6 +1,36 @@
-# aeropuerto-backend
+# AirPort NodeJS API
 
-Servidor NodeJS para aeropuertos
+Servidor NodeJS para administrar un aeropuerto
+
+## 🚀 Instalación y ejecución
+
+Sigue estos pasos para instalar y ejecutar el backend:
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/aeropuerto-backend.git
+    cd aeropuerto-backend
+    ```
+
+2. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+
+3. Crea un archivo `.env` con las variables de entorno necesarias (puedes usar `.env.example` como referencia).
+
+4. Inicia el servidor en modo local
+    ```bash
+    npm run startlocal
+    ```
+
+    O en modo producción:
+    ```bash
+    npm start
+    ```
+
+El backend estará disponible en `http://localhost:3000` (o el puerto configurado).
+
 
 ## ✈️ Lista de mejoras y consideraciones para crear una app profesional
 

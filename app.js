@@ -5,7 +5,7 @@ import vuelosRoutes from "./routes/vuelosRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
-const port = 3000;
+const port = 7400;
 
 app.use(cors());
 app.use(express.json());
@@ -25,13 +25,13 @@ app.listen(port, () => {
 });
 
 // CREATE 
-app.post("/usuarios", (req, res) => {
+app.post("/user", (req, res) => {
     const { nombre, email, password } = req.body
     if (!nombre || !email || !password) {
         return res.status(400).json({ error: "Todos los campos son obligatorios" });
     }
 
-    const sql = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
+    const sql = "INSERT INTO usuario (nombre, email, password) VALUES (?, ?, ?)";
     db.query(sql, [nombre, email, password], (err, result) => {
         if (err) return res.status(500).json({ error: err.message })
         
@@ -40,8 +40,8 @@ app.post("/usuarios", (req, res) => {
 });
 
 // READ
-app.get("/usuarios", (req, res) => {
-    const sql = "SELECT * FROM usuarios";
+app.get("/users", (req, res) => {
+    const sql = "SELECT * FROM usuario";
     db.query(sql, (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
         
